@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main () {
+float Pa1, Pa2, Pa3, F, Pr, Promedio, N1, N2, N3, Total;
+cout<<"Ingrese la nota del primer parcial: ";
+cin>> Pa1;
+if ((Pa1>=0) && (Pa1<=100)){
+ cout<<"Ingrese la nota del segundo parcial: ";
+ cin >> Pa2;
+ if ((Pa2>=0) && (Pa2<=100)){
+ cout << "Ingrese la nota del tercer parcial: ";
+ cin>> Pa3;
+ if ((Pa3>=0) && (Pa3<=100)){
+ Promedio = (Pa1 + Pa2+ Pa3)/3; 
+ N1 = Promedio*0.4; 
+ cout << "Ingrese la nota del examen final: ";
+ cin >> F;
+ if ((F>=0) && (F<=100)){
+ N2 = F*0.4;
+ cout <<"Ingrese la nota del proyecto final: ";
+ cin >> Pr;
+ if ((Pr>=0) && (Pr<=100)){
+ N3 = Pr*0.2;
+ Total = N1+N2+N3;
+ cout << "La nota final del alumno es de: "<< Total;
+ }
+ else 
+ cout<<"La nota del proyecto final no valida";
+ }
+ else
+ cout<<"Nota del examen final no valida";
+ }
+ else
+ cout<<"Nota del tercer parcial no valida";
+ }
+ else
+ cout<<"Nota del segundo parcial no valida";
+ }
+ else
+ cout<<"Nota del primer parcial no valida";
+return 0;
+}
