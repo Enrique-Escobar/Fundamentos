@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numProductos;
+
+    cout << "Introduzca la cantidad de productos: ";
+    cin >> numProductos;
+
+    int total = 0, mayor =0, menor =0, cantidad;
+
+    for (int i = 0; i < numProductos; i++) {
+        cout << "Producto " << (i + 1) << ": ";
+        cin >> cantidad;
+
+        // Sumar al total
+        total += cantidad;
+
+        // Determinar mayor y menor cantidad
+        if (i == 0) {
+            mayor = cantidad;
+            menor = cantidad;
+        }
+        else {
+            if (cantidad > mayor) {
+                mayor = cantidad;
+            }
+            if (cantidad < menor) {
+                menor = cantidad;
+            }
+        }
+    }
+
+    double promedio = static_cast<double>(total) / numProductos;
+
+    cout << "Total de productos en inventario: " << total << endl;
+    cout << "Mayor cantidad: " << mayor << endl;
+    cout << "Menor cantidad: " << menor << endl;
+    cout << "Promedio de productos: " << promedio << endl;
+
+    return 0;
+}
