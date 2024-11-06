@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int n;
+    do {
+        cout << "ingrese el numero el cual quiera ver su tabla de multiplicacion: ";
+        cin >> n;
+    } while (n < 1 || n>10);
+    cout << "Tabla de multiplicar del " << n << endl;
+    for (int i = 1; i <= 10; i++)
+        cout << i << " x " << n<< " = " << i*n<<endl;
+    return 0;
+}
