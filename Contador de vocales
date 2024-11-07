@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void contarVocales(const string &texto) {
+    int contador = 0;
+
+    for (char c : texto) {
+        c = tolower(c);
+        
+        // Comprobar si el carácter es una vocal
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+            contador++;
+        }
+    }
+
+    cout << "El número de vocales en la frase es: " << contador << endl;
+}
+
+int main() {
+    string texto;
+    cout << "Ingrese una frase: ";
+    getline(cin, texto);
+
+    contarVocales(texto);
+
+    return 0;
+}
