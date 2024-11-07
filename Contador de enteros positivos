@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, acum=0, cont=1;
+    do{
+        cout<<"Ingrese el rango de la suma: ";
+        cin>>n;
+    }while (n<0);
+    while (cont <= n){
+    acum = acum + cont;
+    cont = cont + 1;
+    }
+    cout<<"El resultado de la suma es: "<< acum;
+
+    return 0;
+}
